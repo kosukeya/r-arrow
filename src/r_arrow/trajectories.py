@@ -6,10 +6,18 @@ from fractions import Fraction
 from itertools import product
 from typing import Iterable, Sequence
 
-from .markov import FractionMatrix, FractionVector, stationary_distribution, validate_transition_matrix
+from .markov import stationary_distribution, validate_transition_matrix
 
 Path = tuple[int, ...]
 PathDistribution = dict[Path, Fraction]
+
+
+def _as_fraction(value: int | float | Fraction) -> Fraction:
+    if isinstance(value, Fraction):
+        return value
+    if isinstance(value, float):
+        return Fraction(str(value))
+    return Fraction(value)
 
 
 def reverse_path(path: Sequence[int]) -> Path:
@@ -37,12 +45,12 @@ def path_probability(
     n = len(p)
     if any(state < 0 or state >= n for state in path):
         raise ValueError("path contains an out-of-range state")
-    stationary = stationary_distribution(p) if pi is None else tuple(Fraction(x) for x in pi)
+    stationary = stationary_distribution(p) if pi is None else tuple(_as_fraction(x) for x in pi)
     if len(stationary) != n or sum(stationary, Fraction(0)) != 1:
         raise ValueError("stationary distribution has incompatible shape or normalization")
 
     probability = stationary[path[0]]
-    for left, right in zip(path, path[1:], strict=True):
+    for left, right in zip(path, path[1:]):
         probability *= p[left][right]
     return probability
 
@@ -54,7 +62,7 @@ def path_distribution(
 ) -> PathDistribution:
     """Return exact distribution over every path at the declared horizon."""
     p = validate_transition_matrix(matrix)
-    stationary = stationary_distribution(p) if pi is None else tuple(Fraction(x) for x in pi)
+    stationary = stationary_distribution(p) if pi is None else tuple(_as_fraction(x) for x in pi)
     distribution = {
         path: path_probability(path, p, stationary)
         for path in enumerate_paths(len(p), horizon)
