@@ -8,12 +8,14 @@ r-arrow studies which measurable signatures of temporal direction survive loss o
 
 ## Current status
 
-Stage 0 — foundations / research question / success contract — is frozen for review on `research/stage-0-foundations`.
+Stage 0 — foundations / research question / success contract — is completed and merged.
 
-The first research cycle is deliberately small:
+Stage 1 — exact three-state reversible/irreversible arrow benchmark — is implemented on Draft PR #2. The initial CI calibration run passed all 17 tests; the Stage 1 baseline and machine-readable result artifact are now recorded on the same branch.
 
-- **Stage 0** — freeze the question, observables, benchmark family, interpretation guards, and success contract;
-- **Stage 1** — exact three-state reversible/irreversible arrow benchmark;
+The first research cycle remains deliberately small:
+
+- **Stage 0** — completed and merged;
+- **Stage 1** — calibrate a trusted trajectory-level reversible/irreversible diagnostic;
 - **Stage 2** — complete four-state state-partition survival census and first Arrow Survival Map;
 - **Stage 3+** — intentionally not selected yet.
 
@@ -37,6 +39,34 @@ For irreversible references,
 
 The project name remains `r = Robustness`; this ratio is a first-cycle statistic, not the definition of the project.
 
+## Stage 1 calibration result
+
+The frozen biased three-state cycle has
+
+- `p_clockwise = 1/2`;
+- `p_counterclockwise = 1/4`;
+- `p_self = 1/4`;
+- stationary distribution `(1/3,1/3,1/3)`;
+- clockwise currents `J_01=J_12=J_20=1/12`;
+- detailed balance violated;
+- exact-enumeration arrow strength `A_L=(L/4) ln 2` for `L=1..4`.
+
+The reversible control has
+
+- `p_clockwise=p_counterclockwise=3/8`;
+- `p_self=1/4`;
+- the same uniform stationary distribution;
+- zero stationary current;
+- detailed balance satisfied;
+- `A_L=0` for `L=1..4`.
+
+Stage 1 therefore calibrates an independently checked instrument for observable trajectory-level temporal direction before Stage 2 applies any coarse-graining.
+
+Stage 1 artifacts:
+
+- `results/stage1_baseline.md`
+- `results/stage1_baseline.json`
+
 ## Minimum Research Success
 
 The first cycle is successful once it:
@@ -59,11 +89,15 @@ A known/replicated finite result can satisfy this contract.
 
 `observable irreversibility != ontological becoming`
 
+`path-level time asymmetry != thermodynamic entropy production without additional physical assumptions`
+
 `coarse-grained arrow loss != microscopic reversibility`
 
 `finite-horizon non-detection != absence of all higher-order time asymmetry`
 
 `finite Markov result != universal physical theorem`
+
+`Stage 1 calibration != new empirical discovery`
 
 `known result != meaningless result`
 
