@@ -1,4 +1,4 @@
-"""Frozen benchmark transition matrices for the first r-arrow cycle."""
+"""Frozen benchmark transition matrices for r-arrow."""
 
 from __future__ import annotations
 
@@ -42,3 +42,23 @@ def reversible_three_cycle() -> FractionMatrix:
 def biased_four_cycle() -> FractionMatrix:
     """Stage 2 frozen four-state cycle: p=1/2, q=1/4, s=1/4."""
     return _cycle(4, Fraction(1, 2), Fraction(1, 4), Fraction(1, 4))
+
+
+def higher_order_hidden_arrow_four_state() -> FractionMatrix:
+    """Stage 3B positive four-state witness for a hidden higher-order arrow.
+
+    The matrix is doubly stochastic, hence has uniform stationary distribution.
+    Under the frozen binary partition ``01|23``, observed paths are reversal
+    symmetric through L=2 but asymmetric from L=3 in the declared check.
+    Every transition is strictly positive, so no KL infinity is caused by
+    support mismatch.
+    """
+
+    return validate_transition_matrix(
+        [
+            [Fraction(1, 16), Fraction(1, 4), Fraction(7, 16), Fraction(1, 4)],
+            [Fraction(1, 4), Fraction(7, 16), Fraction(1, 4), Fraction(1, 16)],
+            [Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)],
+            [Fraction(7, 16), Fraction(1, 16), Fraction(1, 16), Fraction(7, 16)],
+        ]
+    )
