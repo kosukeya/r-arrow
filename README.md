@@ -8,18 +8,14 @@ r-arrow studies which measurable signatures of temporal direction survive loss o
 
 ## Current status
 
-Stage 0 — foundations / research question / success contract — is completed and merged.
+The first frozen research cycle is implemented through Stage 2:
 
-Stage 1 — exact three-state reversible/irreversible arrow benchmark — is implemented on Draft PR #2. The initial CI calibration run passed all 17 tests; the Stage 1 baseline and machine-readable result artifact are now recorded on the same branch.
+- **Stage 0** — foundations / research question / success contract — complete;
+- **Stage 1** — exact three-state reversible/irreversible arrow calibration — complete;
+- **Stage 2** — complete four-state state-partition survival census and first Arrow Survival Map — complete;
+- **Stage 3+** — intentionally not selected.
 
-The first research cycle remains deliberately small:
-
-- **Stage 0** — completed and merged;
-- **Stage 1** — calibrate a trusted trajectory-level reversible/irreversible diagnostic;
-- **Stage 2** — complete four-state state-partition survival census and first Arrow Survival Map;
-- **Stage 3+** — intentionally not selected yet.
-
-Stage 2 is a valid endpoint for the first research cycle. Novelty is not required for the cycle to count as successful.
+The Stage 0 Minimum Research Success contract is satisfied by the Stage 1 calibration plus the complete Stage 2 finite census. This is a deliberately small success claim: it does not require novelty and it does not establish a universal physical or ontological theorem.
 
 ## Primary question
 
@@ -39,7 +35,7 @@ For irreversible references,
 
 The project name remains `r = Robustness`; this ratio is a first-cycle statistic, not the definition of the project.
 
-## Stage 1 calibration result
+## Stage 1 calibration
 
 The frozen biased three-state cycle has
 
@@ -51,33 +47,51 @@ The frozen biased three-state cycle has
 - detailed balance violated;
 - exact-enumeration arrow strength `A_L=(L/4) ln 2` for `L=1..4`.
 
-The reversible control has
+The reversible control has the same stationary distribution but zero current, satisfies detailed balance, and gives `A_L=0` for `L=1..4`.
 
-- `p_clockwise=p_counterclockwise=3/8`;
-- `p_self=1/4`;
-- the same uniform stationary distribution;
-- zero stationary current;
-- detailed balance satisfied;
-- `A_L=0` for `L=1..4`.
+Stage 1 therefore calibrates an independently checked instrument for observable trajectory-level temporal direction.
 
-Stage 1 therefore calibrates an independently checked instrument for observable trajectory-level temporal direction before Stage 2 applies any coarse-graining.
-
-Stage 1 artifacts:
+Artifacts:
 
 - `results/stage1_baseline.md`
 - `results/stage1_baseline.json`
 
-## Minimum Research Success
+## Stage 2 Arrow Survival Map
 
-The first cycle is successful once it:
+Stage 2 uses the frozen four-state biased cycle with the same `p=1/2`, `q=1/4`, `s=1/4` transition rule.
+
+All 15 set partitions of four states are enumerable exactly. The primary census contains the identity plus all 13 proper coarse-grainings, for 14 observations total, each evaluated at `L=1..4`.
+
+Primary findings on this frozen family:
+
+1. **Adjacent-pair three-state merges retain the arrow.** All four rotationally equivalent adjacent merges have
+   `r_1=0.75`, rising to `r_4≈0.947203`.
+2. **Opposite-pair three-state merges are undetected through `L=4`.** They have `A_L=0` for every frozen horizon.
+3. **All seven two-macrostate observations are undetected through `L=4`.**
+4. **No `memory_revealed_arrow` occurs for `L=1..4`.** No observation has `A_1=0` followed by positive `A_L` at a later frozen horizon.
+5. **Non-lumpability is not sufficient for arrow visibility.** Representative adjacent and opposite three-state merges are both non-lumpable, but only the adjacent merge retains the arrow.
+6. **Every declared case satisfies the KL/data-processing bounds** `0 <= r_L <= 1`.
+
+The key finite structural contrast is therefore:
+
+> the number of retained macro states does not by itself determine observable arrow survival; which microstates are identified matters.
+
+Artifacts:
+
+- `results/stage2_arrow_survival_map.md`
+- `results/stage2_arrow_survival_map.csv`
+
+## Minimum Research Success — satisfied
+
+The first cycle succeeds because it now:
 
 1. exactly distinguishes a reversible control from a biased irreversible cycle;
 2. computes coarse-grained trajectory probabilities without an unjustified Markov approximation;
-3. exhaustively evaluates all 13 proper coarse-grainings of the frozen four-state cycle plus the identity reference for `L=1..4`;
+3. exhaustively evaluates all 13 proper coarse-grainings plus the identity for `L=1..4`;
 4. validates the expected KL/data-processing bounds;
-5. explains at least one nontrivial structural contrast between coarse-grainings, or establishes that no such contrast occurs in the frozen benchmark.
+5. explains an exact same-resolution structural contrast: adjacent-pair merges retain the arrow while opposite-pair merges do not within the frozen horizon.
 
-A known/replicated finite result can satisfy this contract.
+A known/replicated finite result can satisfy this contract. Novelty is not required for this first-cycle success.
 
 ## Stage 0 artifacts
 
@@ -93,14 +107,18 @@ A known/replicated finite result can satisfy this contract.
 
 `coarse-grained arrow loss != microscopic reversibility`
 
-`finite-horizon non-detection != absence of all higher-order time asymmetry`
+`undetected_through_L4 != absence of all higher-order time asymmetry`
 
-`finite Markov result != universal physical theorem`
+`non-lumpability != observable arrow`
 
-`Stage 1 calibration != new empirical discovery`
+`non-Markov observed dynamics != fundamental memory ontology`
+
+`finite partition census != universal coarse-graining theorem`
+
+`exact finite-model result != empirical discovery`
 
 `known result != meaningless result`
 
 ## Methodological rule
 
-Do not enlarge the state space, observation horizon, or model class merely because a preferred effect is absent. Finish the frozen Stage 2 census first, evaluate the success contract, and only then decide whether a Stage 3 is scientifically justified.
+Do not enlarge the state space, observation horizon, or model class merely because a preferred effect is absent. Stage 3 is not selected automatically. The Stage 2 result should first be reviewed for scientific meaning and compared with relevant literature before any next research direction is frozen.
