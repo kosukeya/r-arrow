@@ -1,0 +1,33 @@
+{
+  "stage": 3,
+  "stage2_one_step_regression": {
+    "observation_count": 14,
+    "mismatches": []
+  },
+  "higher_order_witness": {
+    "states": 4,
+    "partition": "01|23",
+    "stationary_distribution": ["1/4", "1/4", "1/4", "1/4"],
+    "macro_flux": [["1/4", "1/4"], ["1/4", "1/4"]],
+    "macro_flux_symmetric": true,
+    "first_asymmetric_horizon": 3,
+    "micro_arrow": {
+      "1": 0.11744652829644073,
+      "2": 0.2348930565928815,
+      "3": 0.3523395848893224,
+      "4": 0.4697861131857634
+    },
+    "observed_arrow": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0007099806355845583,
+      "4": 0.0014851766673412894
+    },
+    "exact_L3_witness": {
+      "path": [0, 0, 1, 0],
+      "probability": "55/1024",
+      "reverse": [0, 1, 0, 0],
+      "reverse_probability": "467/8192"
+    }
+  }
+}
