@@ -44,6 +44,11 @@ def biased_four_cycle() -> FractionMatrix:
     return _cycle(4, Fraction(1, 2), Fraction(1, 4), Fraction(1, 4))
 
 
+def reversible_four_cycle() -> FractionMatrix:
+    """Stage 4 reversible four-state control: p=q=3/8, s=1/4."""
+    return _cycle(4, Fraction(3, 8), Fraction(3, 8), Fraction(1, 4))
+
+
 def higher_order_hidden_arrow_four_state() -> FractionMatrix:
     """Stage 3B positive four-state witness for a hidden higher-order arrow.
 
