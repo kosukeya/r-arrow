@@ -4,6 +4,7 @@ from .benchmarks import (
     biased_four_cycle,
     biased_three_cycle,
     higher_order_hidden_arrow_four_state,
+    reversible_four_cycle,
     reversible_three_cycle,
 )
 from .coarse_grain import (
@@ -14,6 +15,12 @@ from .coarse_grain import (
     partition_label,
     robustness_ratio,
     set_partitions,
+)
+from .equivalence import (
+    EquivalenceResult,
+    observed_time_reversal_equivalence,
+    observed_word_probability,
+    time_reversed_transition,
 )
 from .irreversibility import arrow_strength, biased_cycle_analytic_arrow
 from .markov import (
@@ -34,6 +41,7 @@ from .structural import (
 from .trajectories import path_distribution, path_probability, reverse_path
 
 __all__ = [
+    "EquivalenceResult",
     "arrow_strength",
     "biased_cycle_analytic_arrow",
     "biased_four_cycle",
@@ -47,6 +55,8 @@ __all__ = [
     "observed_arrow_strength",
     "observed_path_distribution",
     "observed_paths_are_reversal_symmetric",
+    "observed_time_reversal_equivalence",
+    "observed_word_probability",
     "one_step_arrow_visible_by_flux",
     "partition_label",
     "path_distribution",
@@ -55,10 +65,12 @@ __all__ = [
     "probability_current",
     "reversal_asymmetry_witnesses",
     "reverse_path",
+    "reversible_four_cycle",
     "reversible_three_cycle",
     "robustness_ratio",
     "set_partitions",
     "stationary_distribution",
     "stationary_macro_flux",
+    "time_reversed_transition",
     "validate_transition_matrix",
 ]
