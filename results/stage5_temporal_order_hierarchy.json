@@ -1,0 +1,107 @@
+{
+  "stage": 5,
+  "model": "higher_order_hidden_arrow_four_state",
+  "state_count": 4,
+  "partition_count": 15,
+  "detection_class_summary": {
+    "1": 4,
+    "2": 2,
+    "3": 2,
+    "infinity": 7
+  },
+  "first_detection_classes": [
+    {"label": "0|1|2|3", "L_arrow": 1, "odd_pair_count": 3, "odd_mass": "9/64"},
+    {"label": "0|1|23", "L_arrow": 2, "odd_pair_count": 3, "odd_mass": "27/1024"},
+    {"label": "0|12|3", "L_arrow": 1, "odd_pair_count": 3, "odd_mass": "9/64"},
+    {"label": "0|13|2", "L_arrow": 1, "odd_pair_count": 3, "odd_mass": "9/64"},
+    {"label": "01|2|3", "L_arrow": 1, "odd_pair_count": 3, "odd_mass": "9/64"},
+    {"label": "02|1|3", "L_arrow": null, "odd_pair_count": null, "odd_mass": null},
+    {"label": "03|1|2", "L_arrow": 2, "odd_pair_count": 3, "odd_mass": "27/1024"},
+    {"label": "0|123", "L_arrow": null, "odd_pair_count": null, "odd_mass": null},
+    {"label": "01|23", "L_arrow": 3, "odd_pair_count": 4, "odd_mass": "27/2048"},
+    {"label": "012|3", "L_arrow": null, "odd_pair_count": null, "odd_mass": null},
+    {"label": "013|2", "L_arrow": null, "odd_pair_count": null, "odd_mass": null},
+    {"label": "02|13", "L_arrow": null, "odd_pair_count": null, "odd_mass": null},
+    {"label": "023|1", "L_arrow": null, "odd_pair_count": null, "odd_mass": null},
+    {"label": "03|12", "L_arrow": 3, "odd_pair_count": 4, "odd_mass": "27/4096"},
+    {"label": "0123", "L_arrow": null, "odd_pair_count": null, "odd_mass": null}
+  ],
+  "representatives": [
+    {
+      "name": "order_1_direct",
+      "label": "0|12|3",
+      "L_arrow": 1,
+      "shortest_witness": [0, 1],
+      "odd_profile": [
+        {"L": 1, "odd_pair_count": 3, "odd_mass": "9/64"},
+        {"L": 2, "odd_pair_count": 9, "odd_mass": "3/16"},
+        {"L": 3, "odd_pair_count": 32, "odd_mass": "2001/8192"}
+      ],
+      "cancellation": {
+        "compatible_micro_paths": 2,
+        "nonzero_micro_contributions": 1,
+        "zero_micro_contributions": 1,
+        "positive_total": "3/64",
+        "negative_total": "0",
+        "net_delta": "3/64",
+        "absolute_total": "3/64",
+        "cancelled_mass": "0"
+      }
+    },
+    {
+      "name": "order_2_hidden",
+      "label": "0|1|23",
+      "L_arrow": 2,
+      "shortest_witness": [0, 2, 1],
+      "odd_profile": [
+        {"L": 1, "odd_pair_count": 0, "odd_mass": "0"},
+        {"L": 2, "odd_pair_count": 3, "odd_mass": "27/1024"},
+        {"L": 3, "odd_pair_count": 15, "odd_mass": "819/16384"}
+      ],
+      "cancellation": {
+        "compatible_micro_paths": 2,
+        "nonzero_micro_contributions": 2,
+        "zero_micro_contributions": 0,
+        "positive_total": "3/256",
+        "negative_total": "-3/1024",
+        "net_delta": "9/1024",
+        "absolute_total": "15/1024",
+        "cancelled_mass": "3/1024"
+      }
+    },
+    {
+      "name": "order_3_hidden",
+      "label": "01|23",
+      "L_arrow": 3,
+      "shortest_witness": [0, 0, 1, 0],
+      "odd_profile": [
+        {"L": 1, "odd_pair_count": 0, "odd_mass": "0"},
+        {"L": 2, "odd_pair_count": 0, "odd_mass": "0"},
+        {"L": 3, "odd_pair_count": 4, "odd_mass": "27/2048"}
+      ],
+      "cancellation": {
+        "compatible_micro_paths": 16,
+        "nonzero_micro_contributions": 8,
+        "zero_micro_contributions": 8,
+        "positive_total": "93/16384",
+        "negative_total": "-147/16384",
+        "net_delta": "-27/8192",
+        "absolute_total": "15/1024",
+        "cancelled_mass": "93/16384"
+      }
+    },
+    {
+      "name": "all_horizon_hidden",
+      "label": "02|1|3",
+      "L_arrow": null,
+      "shortest_witness": null,
+      "odd_profile": [
+        {"L": 1, "odd_pair_count": 0, "odd_mass": "0"},
+        {"L": 2, "odd_pair_count": 0, "odd_mass": "0"},
+        {"L": 3, "odd_pair_count": 0, "odd_mass": "0"}
+      ],
+      "all_horizon_reversible": true
+    }
+  ],
+  "compact_criterion_status": "Exact odd hierarchy and representative micro-to-macro cancellation decomposition established; no universal motif/partition criterion beyond the frozen family is claimed."
+}
