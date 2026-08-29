@@ -8,16 +8,17 @@ r-arrow studies which measurable signatures of temporal direction survive loss o
 
 ## Current status
 
-The project is implemented through bounded Stage 4:
+The project is implemented through bounded Stage 5:
 
 - **Stage 0** — foundations / research question / success contract — complete;
 - **Stage 1** — exact three-state reversible/irreversible arrow calibration — complete;
 - **Stage 2** — complete four-state state-partition survival census and first Arrow Survival Map — complete;
 - **Stage 3** — one-step structural criterion plus bounded higher-order separation — complete;
-- **Stage 4** — exact observation-resolution / history-depth Arrow Detection Frontier — implemented;
-- **Stage 5+** — intentionally not selected.
+- **Stage 4** — exact observation-resolution / history-depth Arrow Detection Frontier — complete;
+- **Stage 5** — exact temporal-order reversal-odd hierarchy and micro-to-macro cancellation analysis — implemented;
+- **Stage 6+** — intentionally not selected.
 
-The first-cycle Minimum Research Success contract was satisfied by Stages 1–2. Stages 3–4 are bounded theoretical continuations: Stage 3 separates one-step from higher-order arrow structure, and Stage 4 classifies exact first-detection depth across a fixed observation lattice without arbitrary horizon extension.
+The first-cycle Minimum Research Success contract was satisfied by Stages 1–2. Stages 3–5 are bounded theoretical continuations: Stage 3 separates one-step from higher-order arrow structure, Stage 4 classifies exact first-detection depth across a fixed observation lattice, and Stage 5 explains those depth classes as the first surviving time-reversal-odd temporal order in the frozen witness.
 
 ## Primary observable
 
@@ -98,6 +99,42 @@ Artifacts:
 - `results/stage4_detection_frontier.md`
 - `results/stage4_detection_frontier.csv`
 
+## Stage 5 temporal-order hierarchy
+
+Stage 5 defines the exact reversal-odd component of the observed horizon-`L` path law by
+
+`O_L(w) = [P_L(w)-P_L(reverse(w))]/2`.
+
+Then
+
+`O_L=0 <=> A_L=0`,
+
+so `L_arrow` is exactly the lowest temporal order whose observed reversal-odd component is nonzero.
+
+For stationary path laws,
+
+`marginalize(O_L)=O_(L-1)`.
+
+Thus the order-2 and order-3 frozen representatives are genuinely higher-order: their first nonzero odd component disappears exactly when one temporal step is marginalized away.
+
+The same frozen Stage 3/4 witness still has detection classes `1,2,3,infinity` with counts `4,2,2,7`. Exact first-detection odd masses show that temporal order is distinct from magnitude: the two `L_arrow=3` binary observations have masses `27/2048` and `27/4096`.
+
+For selected shortest witnesses, Stage 5 decomposes each macro word/reverse difference into signed microtrajectory reversal differences. Representative results are:
+
+- order 1 `0|12|3`, witness `01`: no positive/negative cancellation; macro residual `3/64`;
+- order 2 `0|1|23`, witness `021`: partial cancellation; macro residual `9/1024`;
+- order 3 `01|23`, witness `0010`: multiple positive/negative micro contributions; macro residual `-27/8192`;
+- all-horizon hidden `02|1|3`: no finite odd motif exists because Stage 4 already certifies complete observed reversal equivalence.
+
+The bounded conclusion is explanatory, not universal: no partition-only formula or universal motif taxonomy predicting arbitrary `L_arrow` is claimed.
+
+Artifacts:
+
+- `docs/stage5_protocol.md`
+- `docs/stage5_proofs.md`
+- `results/stage5_temporal_order_hierarchy.md`
+- `results/stage5_temporal_order_hierarchy.json`
+
 ## First-cycle Minimum Research Success — satisfied
 
 The first cycle succeeded because it:
@@ -128,7 +165,13 @@ Novelty was not required for this finite success contract.
 
 `same macrostate count != same detection depth`
 
-`history-depth trade-off != universal uncertainty principle`
+`temporal order != arrow strength`
+
+`higher-order odd component != newly created physical arrow`
+
+`microtrajectory cancellation != destruction of microscopic irreversibility`
+
+`representative motif != universal motif taxonomy`
 
 `finite equivalence certificate != universal theorem about time`
 
@@ -136,4 +179,4 @@ Novelty was not required for this finite success contract.
 
 ## Methodological rule
 
-Do not enlarge the state space, horizon, or model family merely because a preferred effect is absent. Stage 4 replaces open-ended horizon scans with a finite all-horizon equivalence certificate and stops after the fixed 45-case Detection Frontier. Stage 5 is not selected on this branch.
+Do not enlarge the state space, horizon, or model family merely because a preferred effect is absent. Stage 5 stops after explaining the already frozen `L_arrow=1,2,3,infinity` classes of the existing four-state witness with exact reversal-odd components and representative cancellation decompositions. Computational-mechanics/minimal-memory analysis, larger state spaces, higher detection orders, and Stage 6 selection are intentionally outside this branch.
