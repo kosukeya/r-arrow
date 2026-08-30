@@ -8,17 +8,18 @@ r-arrow studies which measurable signatures of temporal direction survive loss o
 
 ## Current status
 
-The project is implemented through bounded Stage 5:
+The project is implemented through bounded Stage 6:
 
 - **Stage 0** — foundations / research question / success contract — complete;
 - **Stage 1** — exact three-state reversible/irreversible arrow calibration — complete;
 - **Stage 2** — complete four-state state-partition survival census and first Arrow Survival Map — complete;
 - **Stage 3** — one-step structural criterion plus bounded higher-order separation — complete;
 - **Stage 4** — exact observation-resolution / history-depth Arrow Detection Frontier — complete;
-- **Stage 5** — exact temporal-order reversal-odd hierarchy and micro-to-macro cancellation analysis — implemented;
-- **Stage 6+** — intentionally not selected.
+- **Stage 5** — exact temporal-order reversal-odd hierarchy and micro-to-macro cancellation analysis — complete;
+- **Stage 6** — exact recursive arrow filtering and Memory–Depth linear-realization census — implemented;
+- **Stage 7+** — intentionally not selected.
 
-The first-cycle Minimum Research Success contract was satisfied by Stages 1–2. Stages 3–5 are bounded theoretical continuations: Stage 3 separates one-step from higher-order arrow structure, Stage 4 classifies exact first-detection depth across a fixed observation lattice, and Stage 5 explains those depth classes as the first surviving time-reversal-odd temporal order in the frozen witness.
+The first-cycle Minimum Research Success contract was satisfied by Stages 1–2. Stages 3–6 are bounded theoretical continuations: Stage 3 separates one-step from higher-order arrow structure, Stage 4 classifies exact first-detection depth across a fixed observation lattice, Stage 5 explains those depth classes as the first surviving time-reversal-odd temporal order, and Stage 6 separates raw detection depth from exact recursive representation complexity.
 
 ## Primary observable
 
@@ -135,6 +136,41 @@ Artifacts:
 - `results/stage5_temporal_order_hierarchy.md`
 - `results/stage5_temporal_order_hierarchy.json`
 
+## Stage 6 Memory–Depth Map
+
+Stage 6 asks a different question from Stage 4–5:
+
+> once arrow-relevant information is distributed across history, how much exact internal state is needed to update forward-versus-reverse evidence without retaining the raw prefix?
+
+It implements an exact recursive filter containing forward and time-reversed hidden-state predictive rows. Their sums reproduce exact observed word likelihoods, so arbitrarily long raw prefixes can be compressed into a fixed finite-dimensional state for the frozen finite hidden-state family.
+
+The current scalar likelihood ratio alone is **not** recursively sufficient in the finite-arrow cases. All eight finite-arrow partitions have an exact prefix-length-`<=3` counterexample: two prefixes have the same current ratio but update to different ratios after the same next symbol. Representative examples include:
+
+- order 1 `0|12|3`: `Lambda(1)=Lambda(0)=1`, but `Lambda(10)=8/11` while `Lambda(00)=1`;
+- order 2 `0|1|23`: `Lambda(02)=Lambda(0)=1`, but `Lambda(021)=32/23` while `Lambda(01)=1`;
+- order 3 `01|23`: `Lambda(001)=Lambda(0)=1`, but `Lambda(0010)=440/467` while `Lambda(00)=1`.
+
+Stage 6 then computes exact weighted-linear minimal realization ranks. The same joint forward/reverse rank `6` occurs at three different detection depths:
+
+- `0|12|3`: `L_arrow=1`, joint rank `6`;
+- `0|1|23`: `L_arrow=2`, joint rank `6`;
+- `01|23`: `L_arrow=3`, joint rank `6`.
+
+Even within `L_arrow=1`, `0|13|2` has joint rank `4` while the other order-1 observations have rank `6`. Therefore raw temporal depth and exact linear representation dimension are distinct axes.
+
+A separate reversal-contrast rank is computed for the signed series `P_forward-P_reverse`. Every all-horizon-hidden observation has contrast rank `0`, while its joint observed-process rank can remain `1` or `2`. Thus process representation complexity and directional contrast complexity also separate.
+
+The reversible four-cycle control has contrast rank `0` under all 15 partitions.
+
+Stage 6 does **not** interpret these ranks as physical memory bits or a unique nonlinear minimal discriminator memory. Computational-mechanics causal-state complexity is also not inferred: no open-ended or approximate mixed-state closure search is performed.
+
+Artifacts:
+
+- `docs/stage6_protocol.md`
+- `docs/stage6_proofs.md`
+- `results/stage6_memory_depth_map.md`
+- `results/stage6_memory_depth_map.json`
+
 ## First-cycle Minimum Research Success — satisfied
 
 The first cycle succeeded because it:
@@ -167,6 +203,16 @@ Novelty was not required for this finite success contract.
 
 `temporal order != arrow strength`
 
+`history depth != internal memory complexity`
+
+`linear realization rank != physical memory bits`
+
+`joint likelihood rank != uniquely defined nonlinear minimal discriminator memory`
+
+`contrast rank != predictive complexity`
+
+`likelihood ratio at one instant != sufficient recursive state in the frozen finite-arrow family`
+
 `higher-order odd component != newly created physical arrow`
 
 `microtrajectory cancellation != destruction of microscopic irreversibility`
@@ -179,4 +225,4 @@ Novelty was not required for this finite success contract.
 
 ## Methodological rule
 
-Do not enlarge the state space, horizon, or model family merely because a preferred effect is absent. Stage 5 stops after explaining the already frozen `L_arrow=1,2,3,infinity` classes of the existing four-state witness with exact reversal-odd components and representative cancellation decompositions. Computational-mechanics/minimal-memory analysis, larger state spaces, higher detection orders, and Stage 6 selection are intentionally outside this branch.
+Do not enlarge the state space, horizon, or model family merely because a preferred effect is absent. Stage 6 stops after the exact four-state Memory–Depth census, recursive-filter sufficiency audit, and reversible controls. It does not start open-ended causal-state reconstruction, approximate memory inference, larger hidden-state families, or Stage 7 selection.
