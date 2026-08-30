@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 from collections import Counter, defaultdict
 from fractions import Fraction
+from functools import lru_cache
 from typing import Any
 
 from .arrow_memory import (
@@ -73,6 +74,7 @@ def _memory_row(matrix: Any, partition: Partition) -> dict[str, Any]:
     }
 
 
+@lru_cache(maxsize=1)
 def stage6_memory_depth_map() -> dict[str, Any]:
     """Return the bounded Stage 6 exact Memory–Depth Map."""
 
