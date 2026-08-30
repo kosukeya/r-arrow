@@ -1,0 +1,45 @@
+{
+  "stage": 6,
+  "model": "higher_order_hidden_arrow_four_state",
+  "partition_count": 15,
+  "finite_arrow_partition_count": 8,
+  "finite_arrow_partitions_with_ratio_only_counterexample": 8,
+  "joint_rank_values_by_detection_depth": {
+    "1": [4, 6],
+    "2": [6],
+    "3": [6],
+    "infinity": [1, 2]
+  },
+  "contrast_rank_values_by_detection_depth": {
+    "1": [4, 6],
+    "2": [6],
+    "3": [6],
+    "infinity": [0]
+  },
+  "rows": [
+    {"label": "0|1|2|3", "L_arrow": 1, "forward_rank": 3, "reverse_rank": 3, "joint_rank": 6, "contrast_rank": 6, "ratio_counterexample": true},
+    {"label": "0|1|23", "L_arrow": 2, "forward_rank": 3, "reverse_rank": 3, "joint_rank": 6, "contrast_rank": 6, "ratio_counterexample": true},
+    {"label": "0|12|3", "L_arrow": 1, "forward_rank": 3, "reverse_rank": 3, "joint_rank": 6, "contrast_rank": 6, "ratio_counterexample": true},
+    {"label": "0|13|2", "L_arrow": 1, "forward_rank": 2, "reverse_rank": 2, "joint_rank": 4, "contrast_rank": 4, "ratio_counterexample": true},
+    {"label": "01|2|3", "L_arrow": 1, "forward_rank": 3, "reverse_rank": 3, "joint_rank": 6, "contrast_rank": 6, "ratio_counterexample": true},
+    {"label": "02|1|3", "L_arrow": null, "forward_rank": 2, "reverse_rank": 2, "joint_rank": 2, "contrast_rank": 0, "ratio_counterexample": false},
+    {"label": "03|1|2", "L_arrow": 2, "forward_rank": 3, "reverse_rank": 3, "joint_rank": 6, "contrast_rank": 6, "ratio_counterexample": true},
+    {"label": "0|123", "L_arrow": null, "forward_rank": 2, "reverse_rank": 2, "joint_rank": 2, "contrast_rank": 0, "ratio_counterexample": false},
+    {"label": "01|23", "L_arrow": 3, "forward_rank": 3, "reverse_rank": 3, "joint_rank": 6, "contrast_rank": 6, "ratio_counterexample": true},
+    {"label": "012|3", "L_arrow": null, "forward_rank": 2, "reverse_rank": 2, "joint_rank": 2, "contrast_rank": 0, "ratio_counterexample": false},
+    {"label": "013|2", "L_arrow": null, "forward_rank": 1, "reverse_rank": 1, "joint_rank": 1, "contrast_rank": 0, "ratio_counterexample": false},
+    {"label": "02|13", "L_arrow": null, "forward_rank": 1, "reverse_rank": 1, "joint_rank": 1, "contrast_rank": 0, "ratio_counterexample": false},
+    {"label": "023|1", "L_arrow": null, "forward_rank": 2, "reverse_rank": 2, "joint_rank": 2, "contrast_rank": 0, "ratio_counterexample": false},
+    {"label": "03|12", "L_arrow": 3, "forward_rank": 3, "reverse_rank": 3, "joint_rank": 6, "contrast_rank": 6, "ratio_counterexample": true},
+    {"label": "0123", "L_arrow": null, "forward_rank": 1, "reverse_rank": 1, "joint_rank": 1, "contrast_rank": 0, "ratio_counterexample": false}
+  ],
+  "representative_ratio_witnesses": [
+    {"name": "order_1_direct", "label": "0|12|3", "prefix_a": [1], "prefix_b": [0], "current_ratio": "1", "extension_symbol": 0, "updated_ratio_a": "8/11", "updated_ratio_b": "1"},
+    {"name": "order_2_hidden", "label": "0|1|23", "prefix_a": [0, 2], "prefix_b": [0], "current_ratio": "1", "extension_symbol": 1, "updated_ratio_a": "32/23", "updated_ratio_b": "1"},
+    {"name": "order_3_hidden", "label": "01|23", "prefix_a": [0, 0, 1], "prefix_b": [0], "current_ratio": "1", "extension_symbol": 0, "updated_ratio_a": "440/467", "updated_ratio_b": "1"},
+    {"name": "all_horizon_hidden", "label": "02|1|3", "witness": null}
+  ],
+  "reversible_control_partition_count": 15,
+  "reversible_control_all_contrast_ranks_zero": true,
+  "causal_state_track_status": "not promoted to a primary success condition; no open-ended or approximate mixed-state closure search performed"
+}
