@@ -1,5 +1,18 @@
 """r-arrow finite stochastic-process tools."""
 
+from .arrow_memory import (
+    ArrowFilterModel,
+    ArrowFilterState,
+    LinearMemoryProfile,
+    RatioInsufficiencyWitness,
+    advance_arrow_filter,
+    arrow_filter_state_for_word,
+    build_arrow_filter_model,
+    filter_matches_direct_word_probability,
+    initial_arrow_filter_state,
+    likelihood_ratio_insufficiency_witness,
+    linear_memory_profile,
+)
 from .benchmarks import (
     biased_four_cycle,
     biased_three_cycle,
@@ -55,20 +68,31 @@ from .temporal_order import (
 from .trajectories import path_distribution, path_probability, reverse_path
 
 __all__ = [
+    "ArrowFilterModel",
+    "ArrowFilterState",
     "CancellationSummary",
     "EquivalenceResult",
+    "LinearMemoryProfile",
     "MicroReversalContribution",
+    "RatioInsufficiencyWitness",
     "ReversalOddPair",
+    "advance_arrow_filter",
+    "arrow_filter_state_for_word",
     "arrow_strength",
     "biased_cycle_analytic_arrow",
     "biased_four_cycle",
     "biased_three_cycle",
+    "build_arrow_filter_model",
     "cancellation_summary",
     "declared_partitions",
     "detailed_balance_holds",
+    "filter_matches_direct_word_probability",
     "first_asymmetric_horizon",
     "higher_order_hidden_arrow_four_state",
+    "initial_arrow_filter_state",
     "is_strongly_lumpable",
+    "likelihood_ratio_insufficiency_witness",
+    "linear_memory_profile",
     "macro_flux_is_symmetric",
     "macro_word_delta",
     "marginalize_last",
