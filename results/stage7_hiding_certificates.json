@@ -1,0 +1,31 @@
+{
+  "stage": 7,
+  "model": "higher_order_hidden_arrow_four_state",
+  "partition_count": 15,
+  "all_horizon_hidden_count": 7,
+  "finite_arrow_count": 8,
+  "certificate_class_counts": {
+    "finite_arrow": 8,
+    "linear_only": 7
+  },
+  "primary_permutation_certificate_total": 0,
+  "hidden_linear_certificate_count": 7,
+  "hidden_linear_rank_counts": {
+    "1": 3,
+    "2": 4
+  },
+  "hidden_identity_intertwiner_count": 7,
+  "reversible_control_identity_permutation_all": true,
+  "representative": {
+    "partition": "02|1|3",
+    "prefix": [0],
+    "forward_hidden_predictive_row": ["5/64", "1/8", "11/64", "1/8"],
+    "reverse_hidden_predictive_row": ["1/8", "1/8", "1/8", "1/8"],
+    "word_probability": "1/2",
+    "reduced_rank": 2,
+    "reduced_forward_state": ["1/2", "1/8"],
+    "reduced_reverse_state": ["1/2", "1/8"],
+    "intertwiner": [["1", "0"], ["0", "1"]]
+  },
+  "bounded_conclusion": "all seven all-horizon-hidden observations are linear-only certified; no observation-preserving reversal-conjugating microstate permutation exists anywhere in the primary witness census"
+}

@@ -8,7 +8,7 @@ r-arrow studies which measurable signatures of temporal direction survive loss o
 
 ## Current status
 
-The project is implemented through bounded Stage 6:
+The project is implemented through bounded Stage 7:
 
 - **Stage 0** — foundations / research question / success contract — complete;
 - **Stage 1** — exact three-state reversible/irreversible arrow calibration — complete;
@@ -16,10 +16,11 @@ The project is implemented through bounded Stage 6:
 - **Stage 3** — one-step structural criterion plus bounded higher-order separation — complete;
 - **Stage 4** — exact observation-resolution / history-depth Arrow Detection Frontier — complete;
 - **Stage 5** — exact temporal-order reversal-odd hierarchy and micro-to-macro cancellation analysis — complete;
-- **Stage 6** — exact recursive arrow filtering and Memory–Depth linear-realization census — implemented;
-- **Stage 7+** — intentionally not selected.
+- **Stage 6** — exact recursive arrow filtering and Memory–Depth linear-realization census — complete;
+- **Stage 7** — exact structural certificates for all-horizon arrow hiding — implemented;
+- **Stage 8+** — intentionally not selected.
 
-The first-cycle Minimum Research Success contract was satisfied by Stages 1–2. Stages 3–6 are bounded theoretical continuations: Stage 3 separates one-step from higher-order arrow structure, Stage 4 classifies exact first-detection depth across a fixed observation lattice, Stage 5 explains those depth classes as the first surviving time-reversal-odd temporal order, and Stage 6 separates raw detection depth from exact recursive representation complexity.
+The first-cycle Minimum Research Success contract was satisfied by Stages 1–2. Stages 3–7 are bounded theoretical continuations: Stage 3 separates one-step from higher-order arrow structure, Stage 4 classifies exact first-detection depth across a fixed observation lattice, Stage 5 explains those depth classes as the first surviving time-reversal-odd temporal order, Stage 6 separates raw detection depth from exact recursive representation complexity, and Stage 7 explains the all-horizon-hidden cases through exact observable minimal-realization equivalence.
 
 ## Primary observable
 
@@ -144,25 +145,11 @@ Stage 6 asks a different question from Stage 4–5:
 
 It implements an exact recursive filter containing forward and time-reversed hidden-state predictive rows. Their sums reproduce exact observed word likelihoods, so arbitrarily long raw prefixes can be compressed into a fixed finite-dimensional state for the frozen finite hidden-state family.
 
-The current scalar likelihood ratio alone is **not** recursively sufficient in the finite-arrow cases. All eight finite-arrow partitions have an exact prefix-length-`<=3` counterexample: two prefixes have the same current ratio but update to different ratios after the same next symbol. Representative examples include:
+The current scalar likelihood ratio alone is **not** recursively sufficient in the finite-arrow cases. All eight finite-arrow partitions have an exact prefix-length-`<=3` counterexample: two prefixes have the same current ratio but update to different ratios after the same next symbol.
 
-- order 1 `0|12|3`: `Lambda(1)=Lambda(0)=1`, but `Lambda(10)=8/11` while `Lambda(00)=1`;
-- order 2 `0|1|23`: `Lambda(02)=Lambda(0)=1`, but `Lambda(021)=32/23` while `Lambda(01)=1`;
-- order 3 `01|23`: `Lambda(001)=Lambda(0)=1`, but `Lambda(0010)=440/467` while `Lambda(00)=1`.
+Stage 6 then computes exact weighted-linear minimal realization ranks. The same joint forward/reverse rank `6` occurs at detection depths `L_arrow=1,2,3`, while all-horizon-hidden observations can retain process rank `1` or `2` but have reversal-contrast rank `0`.
 
-Stage 6 then computes exact weighted-linear minimal realization ranks. The same joint forward/reverse rank `6` occurs at three different detection depths:
-
-- `0|12|3`: `L_arrow=1`, joint rank `6`;
-- `0|1|23`: `L_arrow=2`, joint rank `6`;
-- `01|23`: `L_arrow=3`, joint rank `6`.
-
-Even within `L_arrow=1`, `0|13|2` has joint rank `4` while the other order-1 observations have rank `6`. Therefore raw temporal depth and exact linear representation dimension are distinct axes.
-
-A separate reversal-contrast rank is computed for the signed series `P_forward-P_reverse`. Every all-horizon-hidden observation has contrast rank `0`, while its joint observed-process rank can remain `1` or `2`. Thus process representation complexity and directional contrast complexity also separate.
-
-The reversible four-cycle control has contrast rank `0` under all 15 partitions.
-
-Stage 6 does **not** interpret these ranks as physical memory bits or a unique nonlinear minimal discriminator memory. Computational-mechanics causal-state complexity is also not inferred: no open-ended or approximate mixed-state closure search is performed.
+Thus raw temporal depth, exact recursive representation complexity, and directional contrast complexity are distinct axes.
 
 Artifacts:
 
@@ -170,6 +157,34 @@ Artifacts:
 - `docs/stage6_proofs.md`
 - `results/stage6_memory_depth_map.md`
 - `results/stage6_memory_depth_map.json`
+
+## Stage 7 structural hiding certificates
+
+Stage 7 asks why the seven frozen `L_arrow=infinity` observations are exactly forward/reverse equivalent.
+
+It first exhaustively tests all `4!=24` microstate permutations for an observation-preserving reversal conjugacy. Surprisingly, the irreversible higher-order witness has **no such permutation certificate for any of its 15 partitions**, including all seven all-horizon-hidden observations.
+
+Stage 7 therefore reduces the observed forward and reverse scalar word processes to exact minimal weighted-linear realizations and constructs a verified rational intertwiner. The complete primary taxonomy is:
+
+- `finite_arrow`: 8;
+- `permutation`: 0;
+- `linear_only`: 7;
+- `unresolved`: 0.
+
+The seven hidden observations reduce to rank `1` or `2`. In the deterministic canonical minimal coordinates used here, all seven forward/reverse intertwiners are the identity. This means the original four-state hidden descriptions can differ while all distinctions surviving into the minimal observed word process are identical in the two time directions.
+
+Representative `02|1|3`: after observed prefix `0`, the forward hidden predictive row is `(5/64,1/8,11/64,1/8)` while the reverse row is `(1/8,1/8,1/8,1/8)`. Both assign probability `1/2` to the prefix, and both reduce to the same rank-2 observable state `(1/2,1/8)`.
+
+The reversible four-cycle remains a positive control: the identity microstate permutation certifies every partition because `P=P_rev`.
+
+Stage 7 therefore distinguishes literal hidden-state symmetry from observable representation equivalence. No claim is made that identity in reduced coordinates is identity of the hidden generators, or that unobservable linear directions are physically unreal.
+
+Artifacts:
+
+- `docs/stage7_protocol.md`
+- `docs/stage7_proofs.md`
+- `results/stage7_hiding_certificates.md`
+- `results/stage7_hiding_certificates.json`
 
 ## First-cycle Minimum Research Success — satisfied
 
@@ -213,11 +228,19 @@ Novelty was not required for this finite success contract.
 
 `likelihood ratio at one instant != sufficient recursive state in the frozen finite-arrow family`
 
+`no permutation certificate != no all-horizon reversibility`
+
+`linear-only certificate != literal hidden-state relabeling`
+
+`identity in minimal coordinates != identity of hidden generators`
+
+`observable minimization != physical elimination`
+
 `higher-order odd component != newly created physical arrow`
 
 `microtrajectory cancellation != destruction of microscopic irreversibility`
 
-`representative motif != universal motif taxonomy`
+`representation equivalence != ontological equivalence`
 
 `finite equivalence certificate != universal theorem about time`
 
@@ -225,4 +248,4 @@ Novelty was not required for this finite success contract.
 
 ## Methodological rule
 
-Do not enlarge the state space, horizon, or model family merely because a preferred effect is absent. Stage 6 stops after the exact four-state Memory–Depth census, recursive-filter sufficiency audit, and reversible controls. It does not start open-ended causal-state reconstruction, approximate memory inference, larger hidden-state families, or Stage 7 selection.
+Do not enlarge the state space, horizon, or model family merely because a preferred effect is absent. Stage 7 stops after the exact four-state permutation census, minimal-linear certificate taxonomy, reversible controls, and representative hidden-versus-observable explanation. It does not start arbitrary-HMM reversibility theory, approximate symmetry inference, causal-state reconstruction, thermodynamic interpretation, local-arrow alignment, or Stage 8 selection.
